@@ -66,3 +66,12 @@ test('Método PATCH para atualizar parcialmente um post existente', async () => 
     expect(data.title).toBe('Meu Novo Post');
     expect(data.body).toBe('Conteúdo do meu novo post');
 });
+
+// Teste para o método DELETE
+test('Método DELETE para deletar um post existente', async () => {
+    const res = await fetch(`${BASE_URL}/posts/1`, {
+        method: 'DELETE',
+    });
+     // Testar Status Code
+    expect(res.status).toBe(200);
+});
