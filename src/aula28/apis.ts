@@ -1,5 +1,5 @@
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
-//Definir comtrato da API
+//Definir contrato da API
 type Post = {
     userId: number;
     id?: number;
