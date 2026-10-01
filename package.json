@@ -1,5 +1,11 @@
 {
+  "name": "jogar-largo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "devDependencies": {
-    "typescript": "^7.0.2"
-  }
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  },
+  "scripts": {}
 }
