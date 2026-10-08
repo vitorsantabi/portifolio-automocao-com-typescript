@@ -1,206 +1,88 @@
-# Portfólio de automação com TypeScript e Playwright
+# 🤖 Portfólio de Automação com TypeScript
 
-Projeto criado para praticar automação de testes end-to-end utilizando [Playwright](https://playwright.dev/) e TypeScript.
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Pré-requisitos
+Bem-vindo ao meu repositório de portfólio focado em **Automação de Processos e Testes com TypeScript**. Este espaço reúne projetos, scripts e soluções desenvolvidas para demonstrar boas práticas de engenharia de software, tipagem estática robusta, escalabilidade e eficiência em fluxos automatizados.
 
-Antes de começar, instale:
+---
 
-- [Node.js](https://nodejs.org/) — versão 18 ou superior recomendada;
-- npm, instalado junto com o Node.js;
-- [Yarn](https://yarnpkg.com/) — caso opte por utilizar o gerenciador de pacotes Yarn;
-- Git, caso queira clonar o repositório.
+## 🛠️ Tecnologias e Ferramentas
 
-Para conferir as versões instaladas:
+O ecossistema principal utilizado neste portfólio abrange:
 
-```bash
-node --version
-npm --version
-yarn --version
+*   **Linguagem:** TypeScript / JavaScript (Node.js)
+*   **Testes & Automação Web:** Playwright / Cypress / Selenium (ajuste conforme seu projeto)
+*   **Gerenciamento de Pacotes:** npm / Yarn / pnpm
+*   **Controle de Versão:** Git & GitHub
+*   **Qualidade de Código:** ESLint, Prettier
+
+---
+
+## 📂 Estrutura do Repositório
+
+Abaixo está a organização geral dos diretórios e projetos contidos neste repositório:
+
+```text
+portifolio-automocao-com-typescript/
+├── src/                  # Código-fonte principal dos scripts de automação
+├── tests/                # Casos de teste e cenários automatizados
+├── .gitignore            # Arquivos ignorados pelo Git
+├── package.json          # Dependências e scripts do projeto
+├── tsconfig.json         # Configuração do compilador TypeScript
+└── README.md             # Documentação do projeto
 ```
 
-> Em versões recentes do Node.js, o Yarn pode ser habilitado com `corepack enable`. Como alternativa, instale-o globalmente com `npm install --global yarn`.
+*(Nota: A estrutura exata pode variar dependendo do projeto específico contido nas pastas filhas).*
 
-## Instalação do projeto
+---
 
-Clone o repositório e acesse a pasta do projeto:
+## ⚙️ Pré-requisitos
 
-```bash
-git clone https://github.com/alisonmelo/portifolio-automacao-com-typescript.git
-cd portifolio-automacao-com-typescript
-```
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+*   [Node.js](https://nodejs.org/) (Versão 18+ recomendada)
+*   Gerenciador de pacotes (`npm` ou `yarn`)
 
-### Utilizando npm
+---
 
-Instale os módulos do projeto:
+## 🚀 Como Executar o Projeto
 
-```bash
-npm install
-```
+Siga os passos abaixo para clonar o repositório e executar as automações localmente:
 
-### Utilizando Yarn
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/vitorsantabi/portifolio-automocao-com-typescript.git
+   ```
 
-Instale os módulos do projeto:
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd portifolio-automocao-com-typescript
+   ```
 
-```bash
-yarn install
-```
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-O Yarn utilizará o arquivo `yarn.lock`, quando ele estiver disponível, para manter as versões das dependências consistentes. Se o projeto ainda não possuir esse arquivo, o comando criará um novo `yarn.lock`.
+4. **Execute os scripts ou testes automatizados:**
+   ```bash
+   npm run start
+   # ou para rodar os testes:
+   npm test
+   ```
 
-Instale os navegadores utilizados pelo Playwright:
+---
 
-```bash
-# npm
-npx playwright install
+## 💡 Sobre Mim
 
-# Yarn
-yarn playwright install
-```
+Sou apaixonado por tecnologia, automação e desenvolvimento de software de alta qualidade. Este repositório reflete minha evolução constante aplicando tipagem estática e padrões de projeto para resolver problemas complexos de forma automatizada.
 
-> No Linux, se houver problemas com dependências dos navegadores, utilize `npx playwright install --with-deps` ou `yarn playwright install --with-deps`.
+*   **GitHub:** [@vitorsantabi](https://github.com/vitorsantabi)
+*   **LinkedIn:** [Seu Perfil no LinkedIn](https://linkedin.com) *(Substitua pelo seu link)*
 
-## Estrutura principal
+---
 
-- `tests/` — arquivos com os cenários de teste;
-- `playwright.config.ts` — configuração do Playwright;
-- `package.json` — dependências e comandos do projeto;
-- `package-lock.json` — versões exatas das dependências instaladas pelo npm;
-- `yarn.lock` — versões exatas das dependências instaladas pelo Yarn, quando presente.
+## 📝 Licença
 
-Por padrão, os testes são buscados na pasta `tests/` e executados no navegador Chromium, conforme definido em `playwright.config.ts`.
-
-## Execução dos testes
-
-Execute todos os cenários em modo headless:
-
-```bash
-# npm
-npx playwright test
-
-# Yarn
-yarn playwright test
-```
-
-Execute os testes com a interface visual do navegador:
-
-```bash
-# npm
-npx playwright test --headed
-
-# Yarn
-yarn playwright test --headed
-```
-
-Execute um arquivo específico:
-
-```bash
-# npm
-npx playwright test tests/nome-do-arquivo.spec.ts
-
-# Yarn
-yarn playwright test tests/nome-do-arquivo.spec.ts
-```
-
-Execute apenas um teste pelo título:
-
-```bash
-# npm
-npx playwright test -g "título do teste"
-
-# Yarn
-yarn playwright test -g "título do teste"
-```
-
-Execute os testes utilizando o projeto Chromium:
-
-```bash
-# npm
-npx playwright test --project=chromium
-
-# Yarn
-yarn playwright test --project=chromium
-```
-
-## Relatório de testes
-
-Após a execução, abra o relatório HTML com:
-
-```bash
-# npm
-npx playwright show-report
-
-# Yarn
-yarn playwright show-report
-```
-
-## Depuração
-
-Para executar os testes em modo de depuração:
-
-```bash
-# npm
-npx playwright test --debug
-
-# Yarn
-yarn playwright test --debug
-```
-
-Também é possível utilizar o modo de inspeção do Playwright:
-
-```bash
-# npm
-npx playwright codegen https://exemplo.com
-
-# Yarn
-yarn playwright codegen https://exemplo.com
-```
-
-Substitua a URL pelo endereço da aplicação que deseja explorar.
-
-## Criando um cenário de teste
-
-Crie um arquivo com a extensão `.spec.ts` dentro da pasta `tests/`. Exemplo:
-
-```typescript
-import { test, expect } from '@playwright/test';
-
-test('deve acessar a página inicial', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  await expect(page).toHaveTitle(/Playwright/);
-});
-```
-
-Depois, execute o cenário com:
-
-```bash
-# npm
-npx playwright test
-
-# Yarn
-yarn playwright test
-```
-
-## Boas práticas
-
-- Escolha apenas um gerenciador de pacotes por instalação: npm ou Yarn;
-- Não misture `package-lock.json` e `yarn.lock` sem necessidade;
-- Utilize seletores estáveis, como `getByRole`, `getByText` e `getByTestId`;
-- Mantenha cada cenário independente dos demais;
-- Evite o uso de `waitForTimeout` sempre que possível;
-- Use `expect` para validar os resultados esperados;
-- Não salve informações sensíveis diretamente no código;
-- Organize os cenários por funcionalidade dentro da pasta `tests/`.
-
-## Comandos úteis
-
-| npm | Yarn | Descrição |
-| --- | --- | --- |
-| `npm install` | `yarn install` | Instala as dependências do projeto |
-| `npx playwright install` | `yarn playwright install` | Instala os navegadores do Playwright |
-| `npx playwright test` | `yarn playwright test` | Executa todos os testes |
-| `npx playwright test --headed` | `yarn playwright test --headed` | Executa os testes com o navegador visível |
-| `npx playwright test --debug` | `yarn playwright test --debug` | Executa os testes em modo de depuração |
-| `npx playwright show-report` | `yarn playwright show-report` | Abre o relatório HTML |
-| `npx playwright codegen <url>` | `yarn playwright codegen <url>` | Gera código a partir da interação com uma página |
+Este projeto está sob a licença [MIT](LICENSE). Sinta-se à vontade para utilizá-lo, modificá-lo e estudá-lo!
