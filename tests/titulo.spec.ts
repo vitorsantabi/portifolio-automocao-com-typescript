@@ -1,14 +1,16 @@
 import {test, expect} from '@playwright/test';
 
 test('página carrega com titulo correto', async ({page}) => {
-  await page.goto('https://saucedemo.com/');
-  await expect(page).toHaveTitle(/Swag Labs/);
-})
+    await page.goto('https://www.saucedemo.com/');
 
-test('formulário de login está visível', async ({page}) => {
-    await page.goto('https://saucedemo.com/');
-    
-    await expect (page.locator('#user-name')).toBeVisible();
-    await expect (page.locator('#password')).toBeVisible();
-    await expect (page.locator('#login-button')).toBeVisible();
+    await expect(page).toHaveTitle(/Swag Labs/);
+});
+
+test('formulário de login está visivel', async ({page}) => {
+    await page.goto('https://www.saucedemo.com/');
+
+
+    await expect(page.locator('#user-name')).toBeVisible();
+    await expect(page.locator('#password')).toBeVisible();
+    await expect(page.locator('#login-button')).toBeVisible();
 })
